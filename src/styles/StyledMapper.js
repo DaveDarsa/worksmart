@@ -28,6 +28,9 @@ export const StyledTaskMapper = styled(motion.div)`
     :hover {
       background-color: white;
     }
+    > * {
+      transform: translateX(-1rem);
+    }
     form {
       padding: 0;
       margin: 1rem 0.5rem;

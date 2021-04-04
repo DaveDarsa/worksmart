@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import { ThemeContextProvider } from "./contexts/ThemeContextProvider";
 import Loader from "./Loader";
 import Home from "./pages/Home";
-import Completed from "./pages/Completed";
+import Setup from "./pages/Setup";
 import NotFound from "./pages/NotFound";
 import Nav from "./components/Nav";
 import { AnimatePresence } from "framer-motion";
@@ -29,8 +29,8 @@ function App() {
                   </AnimatePresence>
                 </SavedDetailsProvider>
               </Route>
-              <Route path="/completed">
-                <Completed />
+              <Route path="/setup">
+                <Setup />
               </Route>
               <Route path="*">
                 <NotFound />

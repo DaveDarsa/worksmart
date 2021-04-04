@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faThumbtack } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCog } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -9,14 +9,14 @@ const Nav = () => {
     <StyledNav>
       <li>
         <Link to="/" className="link">
-          <FontAwesomeIcon icon={faThumbtack} color="white" />
-          <span>Ongoing</span>
+          <FontAwesomeIcon icon={faCheck} color="white" />
+          <span>Lists</span>
         </Link>
       </li>
       <li>
-        <Link to="/completed" className="link">
-          <FontAwesomeIcon icon={faCheck} color="white" />
-          <span>Completed</span>
+        <Link to="/setup" className="link">
+          <FontAwesomeIcon icon={faCog} color="white" />
+          <span> Setup</span>
         </Link>
       </li>
     </StyledNav>
