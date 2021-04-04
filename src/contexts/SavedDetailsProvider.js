@@ -5,7 +5,7 @@ export const DetailsContext = createContext();
 export const SavedDetailsProvider = (props) => {
   const [storage, dispatch] = useReducer(DetailsReducer, [
     {
-      name: "basic Things",
+      name: "Basic Things",
       basicItems: ["stuff", "morebasic"],
       sublist: [
         {

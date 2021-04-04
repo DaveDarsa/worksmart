@@ -79,6 +79,7 @@ const StyledAdder = styled(motion.div)`
       text-transform: capitalize;
       color: #222;
       outline: none;
+      user-select: none;
     }
     input::-webkit-input-placeholder {
       font-size: 1.2rem;
@@ -91,13 +92,16 @@ const StyledAdder = styled(motion.div)`
     cursor: pointer;
     color: white;
     border: 2px solid #555;
-    background-color: white;
+    background-color: rgb(220, 220, 220);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     border-radius: 50%;
-
+    transition: background 0.3s ease;
+    :hover {
+      background-color: white;
+    }
     .icon {
       font-size: 2rem;
       color: #555;

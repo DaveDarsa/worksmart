@@ -6,6 +6,7 @@ import {
   faArrowCircleDown,
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import TaskAdder from "./TaskAdder";
 
 const TaskMapper = ({ tasks, dispatch }) => {
   return (
@@ -107,10 +108,18 @@ const TaskMapper = ({ tasks, dispatch }) => {
                         );
                       })}
                     </ul>
+                    <TaskAdder
+                      type="single"
+                      categoryName={category.name}
+                      isSublist={true}
+                      sublistName={sublistItem.name}
+                    />
                   </div>
                 );
               })}
             </div>
+            <TaskAdder type="single" categoryName={category.name} />
+            <TaskAdder type="multiple" categoryName={category.name} />
           </div>
         );
       })}

@@ -26,6 +26,7 @@ export const StyledFooter = styled.div`
     font-size: 1.8rem;
     margin-left: 0.5rem;
     color: white;
+    transition: color 0.3s ease;
     :hover {
       color: #dd2222;
     }

@@ -18,11 +18,16 @@ export const StyledTaskMapper = styled(motion.div)`
   align-items: flex-start;
   align-content: center;
   .category {
+    cursor: pointer;
     align-self: stretch;
     padding: 0 3rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(220, 220, 220, 0.9);
     border-radius: 0.5rem;
     margin-bottom: 5rem;
+    transition: background 0.3s ease;
+    :hover {
+      background-color: white;
+    }
     h2 {
       font-size: 2rem;
       text-transform: capitalize;

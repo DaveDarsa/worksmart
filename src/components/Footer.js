@@ -10,8 +10,8 @@ const Footer = () => {
         Designed and Built by <span> Dave Darsa</span>.
       </p>
       <span>
-        Check me out @
-        <a href="https://github.com/davedarsa" target="_blank">
+        Check out my
+        <a href="https://github.com/davedarsa" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faGithub} className="giticon" />
         </a>
       </span>

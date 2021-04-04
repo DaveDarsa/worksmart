@@ -87,8 +87,10 @@ export const DetailsReducer = (state, action) => {
       var copyofobSub = copyofob.sublist.find((eachList) => {
         return eachList.name === action.payload.sublistName;
       });
+      console.log(copyofobSub.items);
       copyofobSub.items.push(action.payload.taskName);
       copystate[obIdx] = copyofob;
+
       return copystate;
     case "DELETE_SUB_ITEM":
       //payload={tasktypeName:str,sublistName:str,TASKNAME:'str'}
