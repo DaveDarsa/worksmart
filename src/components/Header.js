@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StyledHeader } from "../styles/StyledHeader";
 import { UserContext } from "../contexts/UserContextProvider";
-const Header = ({ theme, setTheme }) => {
+const Header = ({ theme }) => {
   const [userDetails] = useContext(UserContext);
 
   return (
@@ -13,9 +13,7 @@ const Header = ({ theme, setTheme }) => {
         <div className="userInfo">
           Hello, <span>{userDetails.name}</span>
         </div>
-        <div className="themeToggler">Current Theme:{theme}</div>
       </div>
-      <div className="quote"></div>
     </StyledHeader>
   );
 };
