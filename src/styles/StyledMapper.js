@@ -28,6 +28,36 @@ export const StyledTaskMapper = styled(motion.div)`
     :hover {
       background-color: white;
     }
+    form {
+      padding: 0;
+      margin: 1rem 0.5rem;
+      input {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 0.5rem;
+        padding-right: 2rem;
+        text-transform: capitalize;
+        color: #222;
+        outline: none;
+        user-select: none;
+        border: 2px solid black;
+        transition: 0.3s ease;
+        background-color: rgba(220, 220, 220, 0.9);
+      }
+      input:focus {
+        background-color: white;
+        border-color: #02b06d;
+      }
+      input:hover {
+        background-color: white;
+      }
+      input::-webkit-input-placeholder {
+        font-size: 1.2rem;
+        font-weight: 600;
+        font-family: "Lato", sans-serif;
+        color: #222;
+      }
+    }
     h2 {
       font-size: 2rem;
       text-transform: capitalize;
@@ -76,7 +106,37 @@ export const StyledTaskMapper = styled(motion.div)`
       text-transform: capitalize;
     }
     .sublistitem {
+      margin-bottom: 1rem;
       font-size: 1.5rem;
+      form {
+        padding: 0;
+        margin: 1rem 0.5rem;
+        input {
+          font-size: 1.2rem;
+          font-weight: 500;
+          padding: 0.5rem;
+          text-transform: capitalize;
+          color: #222;
+          outline: none;
+          user-select: none;
+          border: 1px solid black;
+          transition: 0.3s ease;
+          background-color: rgba(220, 220, 220, 0.9);
+        }
+        input:focus {
+          border-color: #02b06d;
+          background-color: white;
+        }
+        input:hover {
+          background-color: white;
+        }
+        input::-webkit-input-placeholder {
+          font-size: 1.2rem;
+          font-weight: 600;
+          font-family: "Lato", sans-serif;
+          color: #222;
+        }
+      }
     }
     .subname {
       display: inline-block;

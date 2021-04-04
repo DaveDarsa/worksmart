@@ -107,13 +107,13 @@ const TaskMapper = ({ tasks, dispatch }) => {
                           </li>
                         );
                       })}
+                      <TaskAdder
+                        type="single"
+                        categoryName={category.name}
+                        isSublist={true}
+                        sublistName={sublistItem.name}
+                      />
                     </ul>
-                    <TaskAdder
-                      type="single"
-                      categoryName={category.name}
-                      isSublist={true}
-                      sublistName={sublistItem.name}
-                    />
                   </div>
                 );
               })}
