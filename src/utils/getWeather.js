@@ -1,10 +1,10 @@
 export const getWeather = async (place) => {
-  const apikey = "KT5zbAfw8vy1MVsmNnBHnICxMpsJFvlq";
+  const apikey = "5M3tEzUU5jbD063TGbTLV7WPiStv7jj3";
   const base = "http://dataservice.accuweather.com/locations/v1/cities/search";
   const query = `?apikey=${apikey}&q=${place}`;
   var res = await fetch(base + query);
   const data = await res.json();
-  var key = data[0].Key;
+  var key = typeof data[0] !== "undefined" ? data[0].Key : "328328";
 
   async function fetchweather() {
     const base = "http://dataservice.accuweather.com/currentconditions/v1/";

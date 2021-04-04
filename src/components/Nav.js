@@ -26,7 +26,7 @@ const Nav = () => {
 const StyledNav = styled.ul`
   position: fixed;
   top: 20vh;
-  left: 15vw;
+  left: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.div`
+  overflow: hidden;
   height: 10vh;
   font-size: 1.5rem;
   background-color: rgba(0, 25, 51, 1);

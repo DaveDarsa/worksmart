@@ -8,38 +8,39 @@ import NotFound from "./pages/NotFound";
 import Nav from "./components/Nav";
 import { AnimatePresence } from "framer-motion";
 import { SavedDetailsProvider } from "./contexts/SavedDetailsProvider";
-import Footer from "./components/Footer";
+import UserContextProvider from "./contexts/UserContextProvider";
+
 function App() {
   const [loading, setLoading] = useState(true);
-
   return (
     <ThemeContextProvider>
-      <div className="App">
-        <AnimatePresence exitBeforeEnter>
-          {loading && <Loader setLoading={setLoading} />}
-        </AnimatePresence>
-        {!loading && (
-          <>
-            <Nav />
-            <Switch>
-              <Route exact path="/">
-                <SavedDetailsProvider>
-                  <AnimatePresence exitBeforeEnter>
-                    <Home />
-                  </AnimatePresence>
-                </SavedDetailsProvider>
-              </Route>
-              <Route path="/setup">
-                <Setup />
-              </Route>
-              <Route path="*">
-                <NotFound />
-              </Route>
-            </Switch>
-            <Footer />
-          </>
-        )}
-      </div>
+      <UserContextProvider>
+        <div className="App">
+          <AnimatePresence exitBeforeEnter>
+            {loading && <Loader setLoading={setLoading} />}
+          </AnimatePresence>
+          {!loading && (
+            <>
+              <Nav />
+              <Switch>
+                <Route exact path="/">
+                  <SavedDetailsProvider>
+                    <AnimatePresence exitBeforeEnter>
+                      <Home />
+                    </AnimatePresence>
+                  </SavedDetailsProvider>
+                </Route>
+                <Route path="/setup">
+                  <Setup />
+                </Route>
+                <Route path="*">
+                  <NotFound />
+                </Route>
+              </Switch>
+            </>
+          )}
+        </div>
+      </UserContextProvider>
     </ThemeContextProvider>
   );
 }
