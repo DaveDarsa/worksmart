@@ -1,5 +1,5 @@
 export const getWeather = async (place) => {
-  const apikey = "5M3tEzUU5jbD063TGbTLV7WPiStv7jj3";
+  const apikey = "Ncv3Cd8WB4lovhpkVj13zZ6uJRibtDIN";
   const base = "http://dataservice.accuweather.com/locations/v1/cities/search";
   const query = `?apikey=${apikey}&q=${place}`;
   var res = await fetch(base + query);
