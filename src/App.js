@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Nav from "./components/Nav";
 import { AnimatePresence } from "framer-motion";
 import { SavedDetailsProvider } from "./contexts/SavedDetailsProvider";
+import Footer from "./components/Footer";
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -35,6 +36,7 @@ function App() {
                 <NotFound />
               </Route>
             </Switch>
+            <Footer />
           </>
         )}
       </div>

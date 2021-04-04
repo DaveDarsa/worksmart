@@ -1,6 +1,6 @@
 import React from "react";
 
-const Compoeted = () => {
+const Completed = () => {
   return "completed tasks";
 };
 
