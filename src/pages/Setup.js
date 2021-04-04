@@ -52,7 +52,27 @@ const Setup = (props) => {
     setCity(e.target.value);
   };
   return (
-    <StyledSetup className="setup">
+    <StyledSetup
+      className="setup"
+      initial={{ opacity: 0.8, scale: 0.95, y: -100 }}
+      animate={{
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          mass: 1,
+          damping: 20,
+        },
+      }}
+      exit={{
+        opacity: 0.2,
+        y: -1000,
+        transition: {
+          duration: 0.5,
+        },
+      }}
+    >
       <div className="wrap">
         <motion.div className="warningwrap">
           <AnimatePresence>
@@ -84,7 +104,7 @@ const Setup = (props) => {
           </div>
           <br />
           <div className="row">
-            <label htmlFor="userLocation">What's your city</label>
+            <label htmlFor="userLocation">What's your city?</label>
             <input
               placeholder="City"
               name="userLocation"
@@ -104,12 +124,18 @@ const StyledSetup = styled(motion.div)`
   min-height: 100vh;
   font-size: 2rem;
   position: relative;
+  /* background: linear-gradient(
+    90deg,
+    rgba(22, 22, 22, 0.5) 0%,
+    rgba(22, 22, 22, 0.5) 100%
+  ); */
+  background-color: #003366;
   font-family: "Lato", sans-serif;
   z-index: 0;
   .row {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: baseline;
   }
   form {
     padding: 2rem;
@@ -127,6 +153,8 @@ const StyledSetup = styled(motion.div)`
       text-align: center;
       cursor: pointer;
       outline: none;
+      color: #003366;
+      background-color: rgba(255, 255, 255, 0.5);
       transition: all 0.3s ease-out;
       box-shadow: 1px 1px 5px black;
       border: 1px solid rgba(120, 120, 120, 0.5);
@@ -149,6 +177,7 @@ const StyledSetup = styled(motion.div)`
       outline: none;
       border: none;
       border-bottom: 1px solid rgb(120, 120, 120);
+      border-radius: 0.5rem;
       ::-webkit-input-placeholder {
         font-weight: 300;
       }
@@ -158,7 +187,9 @@ const StyledSetup = styled(motion.div)`
     }
     label {
       padding: 0 8rem;
-      width: 30%;
+      width: 35%;
+      font-weight: 500;
+      color: #003366;
       display: inline-block;
     }
   }
@@ -169,14 +200,16 @@ const StyledSetup = styled(motion.div)`
     font-size: 3rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    color: rgb(100, 100, 100);
+    color: #003366;
   }
   .wrap {
-    border: 5px solid #555;
+    background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 5px rgba(100, 100, 100, 0.5);
   }
   .warning {
     color: tomato;

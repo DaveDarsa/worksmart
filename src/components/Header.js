@@ -5,7 +5,7 @@ const Header = ({ theme }) => {
   const [userDetails] = useContext(UserContext);
 
   return (
-    <StyledHeader className="header">
+    <StyledHeader className="header" id="head">
       <div className="headertop">
         <div className="logo">
           <span>W</span>ork<span>S</span>mart

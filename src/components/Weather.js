@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { UserContext } from "../contexts/UserContextProvider";
 import { getWeather } from "../utils/getWeather";
@@ -7,12 +7,21 @@ import { faCloudSun } from "@fortawesome/free-solid-svg-icons";
 const Weather = () => {
   const [temp, setTemp] = useState(0);
   const [userInfo] = useContext(UserContext);
-
   const weather = getWeather(userInfo.city);
   weather.then((weatherValue) => {
     setTemp(weatherValue);
   });
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    setTime(Date().substr(16, 5));
 
+    var clockID = setInterval(() => {
+      setTime(Date().substr(16, 5));
+    }, 60000);
+    return function cleanUp() {
+      clearInterval(clockID);
+    };
+  }, []);
   return (
     <StyledWeather className="weather">
       <div className="iconandtemp">
@@ -28,6 +37,7 @@ const Weather = () => {
         </div>
       </div>
       {userInfo.city}
+      <div className="time">{time}</div>
     </StyledWeather>
   );
 };
@@ -35,7 +45,7 @@ const Weather = () => {
 const StyledWeather = styled.div`
   font-family: "Lato", sans-serif;
   color: white;
-  margin-bottom: -5rem;
+  margin-bottom: -9rem;
   transform: translateX(5rem);
   font-size: 2rem;
   width: fit-content;
@@ -43,6 +53,7 @@ const StyledWeather = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   .icon {
     /* align-self: flex-start;
     justify-self: flex-end;
@@ -57,6 +68,9 @@ const StyledWeather = styled.div`
     /* display: flex;
     align-items: flex-start;
     flex-direction: column; */
+  }
+  .time {
+    font-size: 3rem;
   }
   sup {
     font-size: 1.5rem;

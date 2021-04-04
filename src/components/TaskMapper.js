@@ -2,10 +2,7 @@ import React from "react";
 import { v4 as uuid } from "uuid";
 import { StyledTaskMapper } from "../styles/StyledMapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowCircleDown,
-  faTrashAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import TaskAdder from "./TaskAdder";
 
 const TaskMapper = ({ tasks, dispatch }) => {
@@ -38,7 +35,6 @@ const TaskMapper = ({ tasks, dispatch }) => {
                     });
                   }}
                 />
-                <FontAwesomeIcon icon={faArrowCircleDown} />
               </span>
             </h2>
             <ul className="basiclist">

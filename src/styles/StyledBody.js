@@ -12,10 +12,23 @@ export const StyledBody = styled.div`
   background-size: cover;
   background-attachment: scroll;
   padding: 5rem 20vw;
+
   .contents {
     padding: 5rem;
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 0.9);
     margin-bottom: 5rem;
   }
+  .weathertime {
+    border: 1px solid black;
+    position: relative;
+  }
+  /* .time {
+    position: absolute;
+    color: white;
+    right: 0;
+
+    font-size: 5rem;
+    width: max-content;
+  } */
 `;
