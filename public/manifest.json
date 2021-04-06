@@ -1,0 +1,17 @@
+{
+    "name": "WorkSmart",
+    "short_name": "WS",
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "white",
+    "icons": [
+        {
+          "src": "./favicon.ico",
+          "sizes": "179x93",
+          "type": "image/png",
+          "purpose": "any maskable"
+        }
+      ]
+  }

@@ -11,7 +11,12 @@ const Footer = () => {
       </p>
       <span>
         Check out my
-        <a href="https://github.com/davedarsa" target="_blank" rel="noreferrer">
+        <a
+          aria-label="github link"
+          href="https://github.com/davedarsa"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FontAwesomeIcon icon={faGithub} className="giticon" />
         </a>
       </span>

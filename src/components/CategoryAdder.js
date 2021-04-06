@@ -15,7 +15,7 @@ const CategoryAdder = () => {
   };
 
   return (
-    <StyledAdder>
+    <StyledAdder className="categoryadder">
       <h3
         onClick={(e) => {
           setForm(!form);

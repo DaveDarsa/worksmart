@@ -91,7 +91,7 @@ const Setup = (props) => {
         </motion.div>
 
         <h2>Let's get to know you</h2>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className="setupform">
           <div className="row">
             <label htmlFor="userName">What's your name?</label>
             <input
@@ -176,6 +176,7 @@ const StyledSetup = styled(motion.div)`
       text-align: center;
       outline: none;
       border: none;
+      padding: 0.5rem 1rem;
       border-bottom: 1px solid rgb(120, 120, 120);
       border-radius: 0.5rem;
       ::-webkit-input-placeholder {
