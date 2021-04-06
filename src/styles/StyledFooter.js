@@ -11,7 +11,7 @@ export const StyledFooter = styled.div`
     display: inline-block;
     padding: 0 0.5rem;
     span {
-      color: #fce9e9;
+      color: #dd2222;
       font-weight: 600;
       font-size: 1.4rem;
     }

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <p>
-        Designed and Built by <span> Dave Darsa</span>.
+        Designed and Built by <span> Dave Darsavelidze</span>.
       </p>
       <span>
         Check out my
