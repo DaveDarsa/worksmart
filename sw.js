@@ -5,8 +5,6 @@ var URLS = [
   // Add URL you want to cache in this list.
   "/worksmart/", // If you have separate JS/CSS files,
   "/worksmart/index.html", // add path to those files here
-  "/worksmart/styles.css",
-  "/worksmart/manifest.json",
 ];
 
 // Respond with cached resources
