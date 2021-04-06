@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/worksmart/static/js/main.dbc04b92.chunk.js",
+    "main.js.map": "/worksmart/static/js/main.dbc04b92.chunk.js.map",
+    "runtime-main.js": "/worksmart/static/js/runtime-main.e527fcc4.js",
+    "runtime-main.js.map": "/worksmart/static/js/runtime-main.e527fcc4.js.map",
+    "static/js/2.9039608b.chunk.js": "/worksmart/static/js/2.9039608b.chunk.js",
+    "static/js/2.9039608b.chunk.js.map": "/worksmart/static/js/2.9039608b.chunk.js.map",
+    "index.html": "/worksmart/index.html",
+    "static/js/2.9039608b.chunk.js.LICENSE.txt": "/worksmart/static/js/2.9039608b.chunk.js.LICENSE.txt",
+    "static/media/bgimg.0625547b.jpg": "/worksmart/static/media/bgimg.0625547b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e527fcc4.js",
+    "static/js/2.9039608b.chunk.js",
+    "static/js/main.dbc04b92.chunk.js"
+  ]
+}

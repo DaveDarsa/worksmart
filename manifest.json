@@ -1,6 +1,5 @@
-{
-    "name": "WorkSmart",
-    "short_name": "WS",
+{ "name": "WorkSmart",
+   "short_name": "WS",
     "lang": "en-US",
     "start_url": "/index.html",
     "display": "standalone",
