@@ -9,31 +9,31 @@ export const SavedDetailsProvider = (props) => {
       ? JSON.parse(local)
       : [
           {
-            name: "Basic Things",
-            basicItems: ["Exercise", "Read something interesting"],
+            name: "Basic Things - example",
+            basicItems: ["Basic item", "Another basic item"],
             sublist: [
               {
-                name: "tomorrow",
-                items: ["get up", "Go for a jog"],
+                name: "Basic Sublist",
+                items: ["Sublist item example", "Another example"],
               },
               {
-                name: "next week",
-                items: ["finish projects", "lay off coffee"],
+                name: "Yet another sublist",
+                items: ["Something important", "Some item"],
               },
             ],
           },
           {
-            name: "entertainment",
+            name: "entertainment - example",
             basicItems: [],
             sublist: [],
           },
           {
-            name: "lifegoals",
-            basicItems: ["Open a sanctuary", "Learn to meditate"],
+            name: "lifegoals - example",
+            basicItems: ["Example goal"],
             sublist: [
               {
                 name: "someday",
-                items: ["Get a better car"],
+                items: ["Do something awesome"],
               },
             ],
           },
